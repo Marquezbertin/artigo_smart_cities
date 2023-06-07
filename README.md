@@ -1,7 +1,7 @@
 # Smart  Cities 
 
 ## Descrição
-Este é um projeto de desenvolvimento de um site sobre o conceito de "Cidades Inteligentes" utilizando HTML. O objetivo é fornecer informações e recursos interativos relacionados a esse tema em ascensão.
+Este é um projeto de desenvolvimento de um artigo sobre o conceito de "Cidades Inteligentes" utilizando HTML. O objetivo é fornecer informações e recursos interativos relacionados a esse tema em ascensão.
 
 ## Funcionalidades
 O Artigo "Relação entre Cidades Inteligentes e Cidades Digitais" possui as seguintes funcionalidades:
