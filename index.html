@@ -115,33 +115,33 @@
       </footer>
     </div>
   </div>
+<script>
+  const apiKey = 'd33376050fba463fa88ce07204118ef8'; // Substitua pela sua chave de API do NewsAPI
+  const newsList = document.getElementById('news-list');
 
-  <script>
-    const apiKey = 'd33376050fba463fa88ce07204118ef8'; // Substitua pela sua chave de API do NewsAPI
-    const newsList = document.getElementById('news-list');
+  async function fetchNews() {
+    try {
+      const response = await fetch(`https://newsapi.org/v2/everything?domains=wsj.com&apiKey=d33376050fba463fa88ce07204118ef8`);
+      const data = await response.json();
 
-    async function fetchNews() {
-      try {
-        const response = await fetch(`https://newsapi.org/v2/everything? domínios=wsj.com &apiKey=d33376050fba463fa88ce07204118ef8`);
-        const data = await response.json();
-
-        if (data.status === 'ok') {
-          data.articles.forEach(article => {
-            const li = document.createElement('li');
-            li.innerHTML = `<strong>${article.title}</strong>: ${article.description}`;
-            newsList.appendChild(li);
-          });
-        } else {
-          console.error('Erro ao obter notícias:', data.message);
-        }
-      } catch (error) {
-        console.error('Erro ao obter notícias:', error.message);
+      if (data.status === 'ok') {
+        data.articles.forEach(article => {
+          const li = document.createElement('li');
+          li.innerHTML = `<strong>${article.title}</strong>: ${article.description}`;
+          newsList.appendChild(li);
+        });
+      } else {
+        console.error('Erro ao obter notícias:', data.message);
       }
+    } catch (error) {
+      console.error('Erro ao obter notícias:', error.message);
     }
+  }
 
-    // Chama a função de busca automática de notícias
-    fetchNews();
-  </script>
+  // Chama a função de busca automática de notícias
+  fetchNews();
+</script>
+
 </body>
 
 </html>

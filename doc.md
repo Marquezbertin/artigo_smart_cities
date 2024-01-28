@@ -35,6 +35,58 @@
 * async function fetchNews() { ... }: Função assíncrona para buscar e exibir notícias.
 * Chamada para a função fetchNews() para iniciar a busca automática de notícias quando a página é carregada.
 
+# Teste Local da Página HTML
+
+Este é um guia simples para realizar testes locais da sua página HTML utilizando um servidor local. Isso é útil especialmente quando há interações com APIs externas, como no caso de exibir notícias atualizadas em sua página.
+
+## Pré-requisitos
+
+- [Python](https://www.python.org/downloads/) (para a opção de servidor Python)
+- [Node.js](https://nodejs.org/) (para a opção de servidor Node.js)
+
+## Configurando e Executando o Servidor Local
+
+### Opção 1: Usando o Python
+
+1. Abra o terminal.
+2. Navegue até o diretório onde seu arquivo HTML está localizado.
+3. Execute o seguinte comando, dependendo da versão do Python:
+    ```bash
+    python -m http.server
+    ```
+    ou
+    ```bash
+    python -m SimpleHTTPServer
+    ```
+4. Acesse a página em seu navegador em `http://localhost:8000` ou `http://127.0.0.1:8000`.
+
+### Opção 2: Usando o Node.js
+
+1. Abra o terminal.
+2. Instale o `http-server` globalmente usando o seguinte comando:
+    ```bash
+    npm install -g http-server
+    ```
+3. Navegue até o diretório onde seu arquivo HTML está localizado.
+4. Execute o seguinte comando:
+    ```bash
+    http-server
+    ```
+5. Acesse a página em seu navegador em `http://localhost:8080`.
+
+### Opção 3: Usando o Visual Studio Code
+
+1. Instale a extensão "Live Server" no Visual Studio Code.
+2. Clique com o botão direito no seu arquivo HTML.
+3. Escolha "Open with Live Server".
+4. A página será aberta automaticamente em seu navegador padrão.
+
+## Notas Importantes
+
+- Certifique-se de que o servidor local esteja em execução enquanto estiver testando a página.
+- Verifique as instruções específicas fornecidas na seção de testes locais do seu projeto, especialmente se houver interações com APIs externas.
+
+
 # Conclusão
 
 Este código HTML cria uma página web interativa e informativa sobre a relação entre cidades digitais e smart cities, incluindo uma seção dinâmica de notícias. O código utiliza HTML para estrutura, CSS para estilos e JavaScript para interatividade. Certifique-se de substituir a chave da API e personalizar conforme necessário.
