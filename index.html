@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Relação entre Cidades Digitais e Smart Cities</title>
+  <style>
+    body {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      background-color: #000;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    .box {
+      width: 500px;
+      margin: 20px;
+      background-color: #000;
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    .news-container {
+      width: 300px;
+      background-color: #333;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-weight: bold;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+    }
+
+    p {
+      text-align: justify;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      color: #888;
+      font-size: 12px;
+      margin-top: 20px;
+    }
+
+    footer a {
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="news-container">
+      <h2>Últimas Notícias</h2>
+      <ul id="news-list"></ul>
+    </div>
+
+    <div class="box">
+      <h1>Relação entre Cidades Digitais e Smart Cities</h1>
+      <img src="C:\Users\Usuário\Documents\GitHub\artigo_smart_cities\Imagens\smartcities.jpg" alt="Imagem relacionada às cidades digitais e smart cities">
+      <p>Entender a conexão entre cidades inteligentes e Smart Cities é crucial para vislumbrar o futuro urbano.
+        Enquanto a cidade digital serve como alicerce, concentrando-se no uso de tecnologias de comunicação para
+        facilitar o acesso às ferramentas, a cidade inteligente transcende esse conceito. Ela abraça uma visão mais
+        abrangente, resultante da fusão entre a sociedade do conhecimento e a inteligência das cidades.</p>
+      <p>A transição para uma smart cities exige conexão de serviços e informações. Enquanto a cidade digital se prende
+        a tecnologias de comunicação, a inteligente usa as Tecnologias de Informação e Comunicação (TICs) para melhorar
+        a gestão de serviços e infraestruturas urbanas, tornando-as mais eficientes, inteligentes e preditivas.</p>
+      <p>A mudança da cidade digital para a cidade inteligente requer a interligação de serviços e informações através
+        de sensores e câmeras codificadoras. Esta mudança exige mudanças na infraestrutura da cidade, o que pode demorar
+        e ser burocrático.</p>
+      <p>No contexto brasileiro, embora muitas cidades já tenham adotado tecnologias digitais, ainda são poucas as
+        prefeituras que possuem planos concretos de se tornarem cidades inteligentes. A transição para uma cidade
+        inteligente pode enfrentar desafios como a falta de investimentos, a necessidade de atualização da
+        infraestrutura existente e a superação de barreiras burocráticas.</p>
+      <p>Para ter sucesso nessa transformação, é importante optar por tecnologias versáteis e adaptáveis, que podem se
+        integrar aos sistemas já existentes e atender às necessidades específicas de cada cidade. Além disso, é
+        fundamental contar com softwares e hardwares de qualidade, bem como com profissionais capacitados para
+        implementar e gerenciar as soluções tecnológicas.</p>
+      <p>Em resumo, a cidade inteligente vai além da cidade digital, integrando tecnologias avançadas para melhorar o
+        gerenciamento urbano e a qualidade de vida dos cidadãos. Esta transição requer investimentos, planejamento e
+        adoção de tecnologias adaptadas, sendo um processo que demanda tempo e esforço por parte das autoridades e da
+        sociedade, em geral.</p>
+      <br>
+      <footer>
+        Autoria do artigo: Bruno Bertin Marquez<br>
+        Criado em: 29/03/2023<br>
+        Linkedin: <a href="https://www.linkedin.com/in/bruno-bertin" target="_blank">Bruno Bertin Marquez</a>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    const apiKey = 'd33376050fba463fa88ce07204118ef8'; // Substitua pela sua chave de API do NewsAPI
+    const newsList = document.getElementById('news-list');
+
+    async function fetchNews() {
+      try {
+        const response = await fetch(`https://newsapi.org/v2/everything? domínios=wsj.com &apiKey=d33376050fba463fa88ce07204118ef8`);
+        const data = await response.json();
+
+        if (data.status === 'ok') {
+          data.articles.forEach(article => {
+            const li = document.createElement('li');
+            li.innerHTML = `<strong>${article.title}</strong>: ${article.description}`;
+            newsList.appendChild(li);
+          });
+        } else {
+          console.error('Erro ao obter notícias:', data.message);
+        }
+      } catch (error) {
+        console.error('Erro ao obter notícias:', error.message);
+      }
+    }
+
+    // Chama a função de busca automática de notícias
+    fetchNews();
+  </script>
+</body>
+
+</html>
