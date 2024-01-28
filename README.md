@@ -15,7 +15,7 @@ JavaScript: A seção de script JavaScript faz uso da API de Notícias do NewsAP
 * Na seção lateral à esquerda, você encontrará as últimas notícias relacionadas a IoT e tecnologia.
 * Imagem Principal: Substitua o caminho da imagem na tag <img> com uma URL ou caminho local válido da imagem que deseja exibir.
 * Chave de API do NewsAPI: Se inscreva no NewsAPI para obter sua chave de API. Substitua 'SUA_CHAVE_DE_API' pela chave fornecida.
-*Conteúdo Principal: Modifique o conteúdo principal no corpo do texto para se adequar às suas necessidades.
+* Conteúdo Principal: Modifique o conteúdo principal no corpo do texto para se adequar às suas necessidades.
 
 ## Autor
 Autor do Artigo: Bruno Bertin Marquez
